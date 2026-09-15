@@ -2,7 +2,7 @@
 import React,{useEffect,useMemo,useState} from "react";
 import {AlertTriangle,BarChart3,CheckCircle2,ChevronRight,CloudRain,Clock3,Compass,IndianRupee,Info,MapPin,Menu,RefreshCw,Route,ShieldCheck,Truck,Users,Wind,X,Phone,FileText,Settings as SettingsIcon,Radio,Navigation,Send,AlertCircle} from "lucide-react";
 
-const API="http://localhost:8000";
+const API="https://ner-logistics-intelligence-x56e.onrender.com";
 type RouteData={id:string,name:string,distance:number,time_min:number,estimated_time:string,risk:number,risk_category:string,accessibility:number,reliability:number,cost:{fuel:number,tolls:number,operations:number,total:number},route_score:number,weather:{rainfall:number,severity:number,condition:string},contributors:Record<string,number>,breakdown:Record<string,number>,points:number[][]};
 
 function riskClass(n:number){return n<=30?"low":n<=60?"moderate":n<=80?"high":"critical"}
